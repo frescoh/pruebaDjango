@@ -12,7 +12,7 @@ from producto_app.forms import ProductoForm
 
 # Create your views here.
 def index(request):
-    return  HttpResponse('Hola mundo')
+    return redirect("/home/productos/listado")
 
 def ejemplo_template(request):
     # context= {
