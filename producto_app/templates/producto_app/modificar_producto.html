@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Modificar producto</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form method= 'post'>
+        {% csrf_token %} {%comment%} para evitar vulnerabilidades{%endcomment%}
+        <label for= 'nombre'>Nombre<label>
+        <input type= 'text' id= 'nombre' name= 'nombre' value= '{{producto.nombre}}'>
+        <br><br>
+
+        <label for= 'precio'>Precio<label>
+        <input type= 'number' id= 'precio' name= 'precio' value= '{{producto.precio}}'>
+        <br><br>
+
+        <label>Marca<label>
+        <select name='marca'>
+        {% for marca in marcas %}
+            <option value= '{{marca.id}}'>{{marca.nombre}}</option>
+        {% endfor %}
+        </select>
+        <br><br>
+        <input type= 'submit' value= 'Actualizar'>
+
+        </form>
+
+        
+    </body>
+</html>

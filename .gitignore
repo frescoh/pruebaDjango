@@ -32,6 +32,7 @@ MANIFEST
 *.manifest
 *.spec
 
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -151,3 +152,5 @@ media
 # <django-project-name>/staticfiles/
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Python,Django
+
+.vscode/*

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ejemplo template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Esto es un titulo</h1>
+        {% comment %}
+            <h1>Pagina de prueba</h1>
+            <p>Nombre: {{nombre}}</p>
+            <p>Apellido: {{apellido}}</p>
+            <p>Curso: {{curso}}</p>
+            <script src="" async defer></script>{% endcomment %}
+        <table border= '1'>
+   
+        <tr>
+            <th>Marca</th>
+        </tr>
+
+        {% for marca in marcas %}
+            <tr>
+                <td>{{marca.nombre}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>
